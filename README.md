@@ -1,5 +1,7 @@
 #Automatic GCP Marker Detection and locating GCP
+
 #Detailed Approach has been explained in Automatic_GCP_detection_approach.pdf 
+
 #Requirement:
 1.python3
 2.pytorch
