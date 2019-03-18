@@ -67,9 +67,9 @@ def ispositive_example(roi):
     roi_arr = np.ascontiguousarray(roi, dtype=np.float32) / 255
     data = torch.from_numpy(roi_arr)
     data = data.unsqueeze(0)
-    data = data.unsqueeze(0).cuda()
-    # if train_on_gpu:
-    #     data.cuda()
+    data = data.unsqueeze(0)
+    if train_on_gpu:
+        data = data.cuda()
     output = model(data)
     _, pred = torch.max(output, 1)
     class_belongs = pred.data.cpu().numpy()

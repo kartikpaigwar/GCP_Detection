@@ -68,9 +68,9 @@ def ispositive_example(roi):
     roi_arr = (roi_arr - 0.5) / 0.5
     data = torch.from_numpy(roi_arr)
     data = data.unsqueeze(0)
-    data = data.unsqueeze(0).cuda()
-    # if train_on_gpu:
-    #     data.cuda()
+    data = data.unsqueeze(0)
+    if train_on_gpu:
+        data = data.cuda()
     output = model(data)
     probout = output.cpu()
     prob = probout.detach().numpy()
