@@ -1,16 +1,20 @@
 #Automatic GCP Marker Detection and locating GCP
+
 #Detailed Approach has been explained in Automatic_GCP_detection_approach.pdf 
+
 #Requirement:
-1.python3
-2.pytorch
-3.opencv
-4.cuda
+ 1. python3
+ 2. pytorch
+ 3. opencv2
+ 4. cuda
 
-#to_run_model1
-python3 main1.py		This performs good with less false predictions. But unable to detect very small GCP markers of size less than 16x16.
+#to_run_model1  $ python3 main1.py
 
-#to_run_model2
-python main2.py			This performs relatively better. But False predictions are more than model 1.
+ This performs good with less false predictions. But unable to detect very small GCP markers of size less than 16x16.
+
+#to_run_model2  $ python main2.py			
+ 
+ This performs relatively better. But False predictions are more than model 1.
 
 Tests are performed on 
 1. CV-Assignment-Dataset
